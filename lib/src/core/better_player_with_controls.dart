@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:io';
 import 'dart:math';
+
 import 'package:better_player/better_player.dart';
 import 'package:better_player/src/configuration/better_player_controller_event.dart';
 import 'package:better_player/src/controls/better_player_cupertino_controls.dart';
@@ -95,10 +96,7 @@ class _BetterPlayerWithControlsState extends State<BetterPlayerWithControls> {
       width: double.infinity,
       color: betterPlayerController
           .betterPlayerConfiguration.controlsConfiguration.backgroundColor,
-      child: AspectRatio(
-        aspectRatio: aspectRatio,
-        child: _buildPlayerWithControls(betterPlayerController, context),
-      ),
+      child: _buildPlayerWithControls(betterPlayerController, context),
     );
 
     if (betterPlayerController.betterPlayerConfiguration.expandToFill) {
